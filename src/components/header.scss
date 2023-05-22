@@ -1,0 +1,47 @@
+@import '../styles/variables.scss';
+
+.header-nav {
+    background-color: $light-grey;
+    padding: 1rem;
+    border: $light-grey 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font: bold 32px $roboto;
+        padding-left: 2rem;
+        text-decoration: underline;
+        letter-spacing: 3px;
+        color: $charcoal;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: $charcoal;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: $cyan;
+                color: white;
+            }
+        }
+
+        .menuItem {
+            margin-right: 20px;
+            font: bold 20px $roboto;
+            letter-spacing: 1.5px;
+        }
+    }
+}
