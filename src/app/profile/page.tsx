@@ -5,11 +5,15 @@ import './page.scss';
 import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import { Song } from '../api/currently-playing/route';
+import { Track } from '../api/tracks/route';
 
 export default function Profile() {
     const user = 'Simon';
-    const [topTracks, setTopTracks] = useState([]);
-    const [currentlyPlaying, setCurrentlyPlaying] = useState({});
+    const [topTracks, setTopTracks] = useState<Track[]>([]);
+    const [currentlyPlaying, setCurrentlyPlaying] = useState<Song>({
+        isPlaying: false,
+    });
 
     useEffect(() => {
         // Run the fetch request only on the client-side
@@ -46,12 +50,14 @@ export default function Profile() {
                                 </span>
                             </div>
 
-                            <Image
-                                src={currentlyPlaying.albumImageUrl}
-                                alt='Album cover'
-                                width={200}
-                                height={200}
-                            />
+                            {currentlyPlaying?.albumImageUrl && (
+                                <Image
+                                    src={currentlyPlaying.albumImageUrl}
+                                    alt='Album cover'
+                                    width={200}
+                                    height={200}
+                                />
+                            )}
                         </div>
                     </div>
                 ) : (
@@ -60,7 +66,7 @@ export default function Profile() {
             </div>
 
             <div className='profile-section'>
-                {topTracks.length > 0 && (
+                {topTracks && topTracks?.length > 0 && (
                     <>
                         <h3>Top tracks</h3>
                         <div className='top-tracks'>
