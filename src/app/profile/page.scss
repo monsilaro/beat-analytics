@@ -1,2 +1,38 @@
+@import '../../styles/variables.scss';
+
 .profile {
+    .profile-section {
+        margin-top: 2rem;
+
+        h3 {
+            font: 24px $rubik;
+            color: $cyan;
+            margin-bottom: 1rem;
+            width: 100%;
+            border-bottom: 1px solid $cyan;
+        }
+    }
+
+    .top-tracks {
+        display: flex;
+    }
+
+    .track {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .track-info {
+            display: flex;
+            flex-direction: column;
+
+            .track-name {
+                font: bold 16px $roboto;
+                color: $charcoal;
+            }
+            .track-artist {
+                color: $dark-grey;
+            }
+        }
+    }
 }

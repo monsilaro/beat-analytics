@@ -1,7 +1,18 @@
+@import '../../styles/variables.scss';
+
 .about {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 60%;
     margin: auto;
+
+    h2 {
+        font: bold 32px $rubik;
+        text-align: center;
+    }
+
+    span {
+        font: 16px $roboto;
+    }
 }

@@ -1,4 +1,4 @@
-import '../styles/globals.scss';
+import '../styles/layout.scss';
 
 import Header from '../components/header';
 import React from 'react';

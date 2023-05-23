@@ -1,13 +1,16 @@
 import './header.scss';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import beatAnalyticsIcon from '../../public/beat-analytics-icon.png';
 
 const Header = () => {
     return (
         <nav className='header-nav'>
-            <Link href='/'>
-                <div className='logo'>BeatAnalytics</div>
+            <Link href='/' className='logo' style={{ textDecoration: 'none' }}>
+                <Image src={beatAnalyticsIcon} alt='Site logo' />
+                <span>BeatAnalytics</span>
             </Link>
             <ul className='menu'>
                 <li className='menuItem'>
