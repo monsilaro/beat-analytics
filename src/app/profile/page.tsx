@@ -18,13 +18,15 @@ export default function Profile() {
     useEffect(() => {
         // Run the fetch request only on the client-side
         if (typeof window !== 'undefined') {
-            fetch('http://localhost:3000/api/tracks')
+            fetch('https://beat-analytics-monsilaro.vercel.app/api/tracks')
                 .then((res) => res.json())
                 .then((data) => {
                     setTopTracks(data);
                 });
 
-            fetch('http://localhost:3000/api/currently-playing')
+            fetch(
+                'https://beat-analytics-monsilaro.vercel.app/api/currently-playing'
+            )
                 .then((res) => res.json())
                 .then((data) => {
                     setCurrentlyPlaying(data);
