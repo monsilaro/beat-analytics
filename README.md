@@ -29,6 +29,38 @@ Follow these steps to get the BeatAnalytics app up and running:
 
 1. Clone the repository:
 
-```bash
 git clone https://github.com/your-username/beat-analytics.git
-```
+
+css
+
+2. Navigate to the project directory:
+
+cd beat-analytics
+
+3. Install the dependencies:
+
+npm install
+
+4. Set up environment variables:
+
+    - Create a `.env.local` file in the root of the project.
+    - Add your Spotify API credentials to the `.env.local` file:
+
+        ```
+        SPOTIFY_CLIENT_ID=your-client-id
+        SPOTIFY_CLIENT_SECRET=your-client-secret
+        ```
+
+5. Start the development server:
+
+npm run dev
+
+6. Open your browser and visit `http://localhost:3000` to access the BeatAnalytics app.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
