@@ -2,6 +2,7 @@ import '../styles/layout.scss';
 
 import Header from '../components/header';
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
     title: 'BeatAnalytics',
@@ -17,6 +18,7 @@ export default function RootLayout({
         <>
             <html lang='en'>
                 <body>
+                    <SpeedInsights />
                     <Header />
                     <main>{children}</main>
                     {/* footer */}
